@@ -2131,7 +2131,7 @@ def shortners(url):
         return mdiskpro(url)
 
     # tnshort
-    elif "tnshort.in" in url:
+    elif "link.tnshort.net" in url:
         print("entered tnshort:",url)
         return tnshort(url)
 
