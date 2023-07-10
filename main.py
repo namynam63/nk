@@ -40,9 +40,9 @@ def loopthread(message):
         msg = app.send_message(message.chat.id, "⚡ __generating...__", reply_to_message_id=message.id)
     else:
         if urls[0] in "https://olamovies" or urls[0] in "https://psa.pm/":
-            msg = app.send_message(message.chat.id, "🔎 __this might take some time...__", reply_to_message_id=message.id)
+            msg = app.send_message(message.chat.id, "🔎 __this might take long some time...__", reply_to_message_id=message.id)
         else:
-            msg = app.send_message(message.chat.id, "🔎 __bypassing...__", reply_to_message_id=message.id)
+            msg = app.send_message(message.chat.id, "🔎 __bypassing..._please wait_", reply_to_message_id=message.id)
 
     link = ""
     for ele in urls:
@@ -70,7 +70,7 @@ def loopthread(message):
 # start command
 @app.on_message(filters.command(["start"]))
 def send_start(client: pyrogram.client.Client, message: pyrogram.types.messages_and_media.message.Message):
-    app.send_message(message.chat.id, f"__👋 Hi **{message.from_user.mention}**, i am Link Bypasser Bot, just send me any supported links and i will get you results.\nCheckout /help to Read More__",
+    app.send_message(message.chat.id, f"__👋 Hi **{message.from_user.mention}**, i am Link Bypasser Bot kmishero, just send me any supported links and i will get you results.\nCheckout /help to Read More__",
     reply_markup=InlineKeyboardMarkup([[ InlineKeyboardButton("🌐 Source Code", url="https://github.com/bipinkrish/Link-Bypasser-Bot")]]), reply_to_message_id=message.id)
 
 
